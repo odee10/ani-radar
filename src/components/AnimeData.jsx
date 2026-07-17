@@ -26,7 +26,7 @@ function AnimeData(){
 
   return(
     <div>
-      {animeList.map((anime, index) => (
+      {animeList.slice(0,6).map((anime, index) => (
         <AnimeCard key={`${anime.mal_id}-${index}`} anime={anime} />
       ))}
     </div>
@@ -34,3 +34,5 @@ function AnimeData(){
 }
 
 export default AnimeData
+
+// animeList.slice(0, 5)).map(...) to limit the amount of objects rendered
