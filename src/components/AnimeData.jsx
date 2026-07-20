@@ -27,25 +27,22 @@ function AnimeData() {
     fetchData();
   }, []);
 
+  const filteredList = animeList.filter(
+    (anime, index, self) =>
+      index === self.findIndex((u) => u.mal_id === anime.mal_id),
+  );
+
   return (
     <div>
       {isLoading
         ? [...Array(6)].map((_, index) => <AnimeCardSkeleton key={index} />)
-        : animeList
-            .slice(0, 6)
+        : filteredList
+            .slice(0, 10)
             .map((anime, index) => (
               <AnimeCard key={`${anime.mal_id}-${index}`} anime={anime} />
             ))}
     </div>
   );
-
-  // return(
-  //   <div>
-  //     {animeList.slice(0,6).map((anime, index) => (
-  //       <AnimeCard key={`${anime.mal_id}-${index}`} anime={anime} />
-  //     ))}
-  //   </div>
-  // );
 }
 
 export default AnimeData;
