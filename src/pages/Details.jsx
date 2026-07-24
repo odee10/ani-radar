@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import DetailsSkeleton from "./DetailsSkeleton";
+import DetailsHero from "../components/DetailsHero";
 
 function Details() {
   const { id } = useParams();
@@ -33,7 +34,7 @@ function Details() {
         <DetailsSkeleton />
       ) : (
         <div className="w-screen h-dvh">
-          <h1>{anime.title}</h1>
+          <DetailsHero anime={anime} />
         </div>
       )}
     </div>

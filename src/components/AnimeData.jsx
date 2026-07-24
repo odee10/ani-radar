@@ -29,7 +29,7 @@ function AnimeData() {
 
   const filteredList = animeList.filter(
     (anime, index, self) =>
-      index === self.findIndex((u) => u.mal_id === anime.mal_id),
+      index === self.findIndex((a) => a.mal_id === anime.mal_id),
   );
 
   return (
