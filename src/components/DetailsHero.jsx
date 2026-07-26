@@ -22,7 +22,7 @@ function DetailsHero({ anime }) {
           alt={anime.title_english}
         />
 
-        <div className="flex flex-col items-center gap-4 text-center">
+        <div className="flex flex-col items-center gap-4 sm:max-w-135 text-center">
           <h1 className="text-xl sm:text-2xl font-semibold">
             {anime.title_english}
           </h1>
