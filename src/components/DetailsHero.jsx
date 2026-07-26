@@ -5,8 +5,8 @@ function DetailsHero({ anime }) {
   console.log(anime);
 
   return (
-    <div className="">
-      <div className="flex px-4 pt-4 pb-6">
+    <div className="flex flex-col items-center">
+      <div className="flex px-4 pt-4 pb-6 w-full max-w-220">
         <Link
           className="px-4 py-2 text-sm rounded-lg bg-white/5 hover:bg-white/10"
           to={"/"}

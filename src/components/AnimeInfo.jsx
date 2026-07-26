@@ -2,7 +2,7 @@ function AnimeInfo({ anime }) {
   const season = anime.season.charAt(0).toUpperCase() + anime.season.slice(1);
 
   return (
-    <div className="flex flex-col sm:items-center gap-6 sm:gap-5 p-10">
+    <div className="flex flex-col sm:items-center gap-6 sm:gap-5 p-4 sm:p-10">
       <div className="p-4 sm:w-full sm:max-w-198 border border-white/40 rounded-xl bg-zinc-800">
         <h1 className="text-xl font-bold text-red-400">Synopsis</h1>
         <h2>{anime.synopsis}</h2>
