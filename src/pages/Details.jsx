@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import DetailsSkeleton from "./DetailsSkeleton";
 import DetailsHero from "../components/DetailsHero";
+import AnimeInfo from "../components/AnimeInfo";
 
 function Details() {
   const { id } = useParams();
@@ -11,7 +12,7 @@ function Details() {
     async function fetchData() {
       try {
         const response = await fetch(
-          `https://api.jikan.moe/v4/anime/${id}/full`,
+          `https://api.jikan.moe/v4/anime/${id}`,
         );
 
         if (!response.ok) {
@@ -35,6 +36,7 @@ function Details() {
       ) : (
         <div className="w-screen h-dvh">
           <DetailsHero anime={anime} />
+          <AnimeInfo anime={anime} />
         </div>
       )}
     </div>
