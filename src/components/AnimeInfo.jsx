@@ -3,13 +3,13 @@ function AnimeInfo({ anime }) {
 
   return (
     <div className="flex flex-col sm:items-center gap-6 sm:gap-5 p-4 sm:p-10">
-      <div className="p-4 sm:w-full sm:max-w-198 border border-white/40 rounded-xl bg-zinc-800">
+      <div className="p-4 sm:w-full sm:max-w-198 border border-white/10 rounded-xl bg-zinc-800">
         <h1 className="text-xl font-bold text-red-400">Synopsis</h1>
         <h2>{anime.synopsis}</h2>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 sm:w-full sm:max-w-198">
-        <div className="p-4 sm:w-full sm:min-w-3/5 sm:max-w-100 border border-white/40 rounded-xl bg-zinc-800">
+        <div className="p-4 sm:w-full sm:min-w-3/5 sm:max-w-100 border border-white/10 rounded-xl bg-zinc-800">
           <h1 className="text-xl font-bold text-red-400">Information</h1>
           <h2>Type: {anime.type}</h2>
           <h2>Episodes: {anime.episodes}</h2>
@@ -39,7 +39,7 @@ function AnimeInfo({ anime }) {
           <h2>Rating: {anime.rating}</h2>
         </div>
 
-        <div className="p-4 sm:w-full sm:max-h-50 border border-white/40 rounded-xl bg-zinc-800">
+        <div className="p-4 sm:w-full sm:max-h-50 border border-white/10 rounded-xl bg-zinc-800">
           <h1 className="text-xl font-bold text-red-400">Statistics</h1>
           <h2>Score: {!anime.score ? "" : anime.score}</h2>
           <h2>

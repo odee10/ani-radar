@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import DetailsSkeleton from "./DetailsSkeleton";
 import DetailsHero from "../components/DetailsHero";
 import AnimeInfo from "../components/AnimeInfo";
+import Footer from "../components/Footer";
 
 function Details() {
   const { id } = useParams();
@@ -37,6 +38,7 @@ function Details() {
         <div className="w-screen h-dvh">
           <DetailsHero anime={anime} />
           <AnimeInfo anime={anime} />
+          <Footer />
         </div>
       )}
     </div>

@@ -14,7 +14,7 @@ function AnimeCard({anime}){
 
   return(
     <Link to={`/details/${anime.mal_id}`}>
-      <div className="relative mb-5 max-w-60 rounded-xl bg-neutral-800 group overflow-hidden">
+      <div className="relative mb-5 max-w-60 rounded-xl bg-neutral-800 group drop-shadow-lg/30 drop-shadow-black overflow-hidden">
         <div className="min-h-40 overflow-hidden">
           <img className="w-full max-h-72 object-cover group-hover:scale-105 duration-600" src={anime.images.webp.large_image_url} alt={anime.title} />
           <div className={`absolute top-3 right-3 px-2 rounded-md ${tvIcon} opacity-80`}>
