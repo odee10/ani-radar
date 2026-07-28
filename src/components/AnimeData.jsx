@@ -37,7 +37,7 @@ function AnimeData() {
       {isLoading
         ? [...Array(6)].map((_, index) => <AnimeCardSkeleton key={index} />)
         : filteredList
-            .slice(0, 10)
+            .slice(0, 6)
             .map((anime, index) => (
               <AnimeCard key={`${anime.mal_id}-${index}`} anime={anime} />
             ))}

@@ -3,14 +3,14 @@ function AnimeInfo({ anime }) {
 
   return (
     <div className="flex flex-col sm:items-center gap-6 sm:gap-5 p-4 sm:p-10">
-      <div className="p-4 sm:w-full sm:max-w-198 border border-white/10 rounded-xl bg-zinc-800">
-        <h1 className="text-xl font-bold text-red-400">Synopsis</h1>
+      <div className="p-4 sm:w-full sm:max-w-198 rounded-xl bg-zinc-800/50">
+        <h1 className="text-xl font-bold text-lime-400">Synopsis</h1>
         <h2>{anime.synopsis}</h2>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 sm:w-full sm:max-w-198">
-        <div className="p-4 sm:w-full sm:min-w-3/5 sm:max-w-100 border border-white/10 rounded-xl bg-zinc-800">
-          <h1 className="text-xl font-bold text-red-400">Information</h1>
+        <div className="p-4 sm:w-full sm:min-w-3/5 sm:max-w-100 rounded-xl bg-zinc-800/50">
+          <h1 className="text-xl font-bold text-lime-400">Information</h1>
           <h2>Type: {anime.type}</h2>
           <h2>Episodes: {anime.episodes}</h2>
           <h2>Aired: {anime.aired.string}</h2>
@@ -39,8 +39,8 @@ function AnimeInfo({ anime }) {
           <h2>Rating: {anime.rating}</h2>
         </div>
 
-        <div className="p-4 sm:w-full sm:max-h-50 border border-white/10 rounded-xl bg-zinc-800">
-          <h1 className="text-xl font-bold text-red-400">Statistics</h1>
+        <div className="p-4 sm:w-full sm:max-h-50 rounded-xl bg-zinc-800/50">
+          <h1 className="text-xl font-bold text-lime-400">Statistics</h1>
           <h2>Score: {!anime.score ? "" : anime.score}</h2>
           <h2>
             Rank: {!anime.rank ? "" : anime.rank} {!anime.rank ? "" : `(scored by ${anime.scored_by.toLocaleString()})`}

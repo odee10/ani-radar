@@ -31,7 +31,7 @@ function DetailsHero({ anime }) {
           <div className="flex justify-center flex-wrap gap-2 sm:min-w-60">
             {anime.genres.map((genre) => (
               <div
-                className="px-3 py-1 text-sm border border-white/30 rounded-full bg-zinc-800"
+                className="px-3 py-1 text-sm border border-white/10 rounded-full bg-zinc-800"
                 key={genre.mal_id}
               >
                 {genre.name}

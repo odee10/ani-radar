@@ -1,10 +1,13 @@
-import AnimeCardSkeleton from "../components/AnimeCardSkeleton";
+import Header from "../components/Header";
 import AnimeData from "../components/AnimeData";
+import Footer from "../components/Footer";
 
 function Home() {
   return(
     <>
+      <Header />
       <AnimeData />
+      <Footer />
     </>
   );
 }
