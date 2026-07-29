@@ -1,6 +1,6 @@
 function AnimeCardSkeleton(){
   return(
-    <div className="mb-5 min-w-60 min-h-95 rounded-xl bg-black/20 animate-pulse overflow-hidden">
+    <div className="min-w-60 min-h-95 rounded-xl bg-black/20 animate-pulse overflow-hidden">
       <div className="min-h-72 bg-neutral-800"></div>
       <div className="p-4">
         <div className="mb-3 h-6 rounded-xl bg-neutral-800"></div>

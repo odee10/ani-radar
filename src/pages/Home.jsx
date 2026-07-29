@@ -1,12 +1,13 @@
 import Header from "../components/Header";
-import AnimeData from "../components/AnimeData";
+import AnimeSection from "../components/AnimeSection";
 import Footer from "../components/Footer";
 
 function Home() {
+
   return(
     <>
       <Header />
-      <AnimeData />
+      <AnimeSection title="Summer 2026" />
       <Footer />
     </>
   );

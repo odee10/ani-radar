@@ -26,7 +26,7 @@ function DetailsHero({ anime }) {
           <h1 className="text-xl sm:text-2xl font-semibold">
             {anime.title_english}
           </h1>
-          <h2 className="text-sm sm:text-lg text-white/60">{anime.title}</h2>
+          <h2 className="px-2 text-sm sm:text-lg text-white/60">{anime.title}</h2>
 
           <div className="flex justify-center flex-wrap gap-2 sm:min-w-60">
             {anime.genres.map((genre) => (
