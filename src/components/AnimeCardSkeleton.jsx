@@ -11,3 +11,5 @@ function AnimeCardSkeleton(){
 }
 
 export default AnimeCardSkeleton
+
+// fix the grid display for the skeleton cards

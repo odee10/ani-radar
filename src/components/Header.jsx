@@ -15,3 +15,5 @@ function Header() {
 }
 
 export default Header;
+
+// remember to make a HeaderSkeleton for this component

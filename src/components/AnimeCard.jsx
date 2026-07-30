@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 function AnimeCard({anime}){
-  console.log(anime);
+  // console.log(anime);
 
   var tvIcon;
 
