@@ -11,7 +11,7 @@ function AnimeData() {
       try {
         // When adding the "upcoming season" section you will need to make this reusable
         // Probably just need to have a parameter that controls where oyu fetch the information from
-        const response = await fetch("https://api.jikan.moe/v4/seasons/now");
+        const response = await fetch("https://api.jikan.moe/v4/seasons/now?page=1");
 
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);
@@ -39,7 +39,7 @@ function AnimeData() {
       {isLoading
         ? [...Array(6)].map((_, index) => <AnimeCardSkeleton key={index} />)
         : filteredList
-            .slice(0, 6)
+            // .slice(0,6)
             .map((anime, index) => (
               <AnimeCard key={`${anime.mal_id}-${index}`} anime={anime} />
             ))}

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 function AnimeCard({anime}){
-  // console.log(anime);
+  console.log(anime);
 
   var tvIcon;
 
@@ -24,7 +24,7 @@ function AnimeCard({anime}){
         <div className="p-4 min-h-15 text-base font-medium">
           <h2 className="text-sm truncate max-w-40">{anime.title_english}</h2>
           <p className="pt-1 text-sm text-white/30">
-            {anime.aired.string.slice(0,12)}
+            {anime.aired.string.slice(0,5)}, {anime.aired.prop.from.year}
           </p>
         </div>
       </div>
@@ -34,5 +34,5 @@ function AnimeCard({anime}){
 
 export default AnimeCard
 
-// fix the date display so it doesn't break if the format of strings id different
+// fix the date display so it doesn't break if the format of strings is different
 // Probably use season, day, and month instead
