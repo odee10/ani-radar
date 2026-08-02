@@ -1,4 +1,4 @@
-function AnimeInfoSkeleton() {
+function DetailsBodySkeleton() {
   return(
     <div className="flex flex-col sm:items-center gap-6 sm:gap-4 p-4 sm:p-10 min-w-full">
       <div className="py-20 sm:w-full sm:max-w-200 rounded-xl bg-zinc-800"></div>
@@ -10,4 +10,4 @@ function AnimeInfoSkeleton() {
   );
 }
 
-export default AnimeInfoSkeleton
+export default DetailsBodySkeleton

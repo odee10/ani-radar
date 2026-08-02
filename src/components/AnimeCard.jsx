@@ -14,7 +14,7 @@ function AnimeCard({ anime }) {
       <div className="relative rounded-xl bg-neutral-800 group drop-shadow-lg/30 drop-shadow-black overflow-hidden">
         <div className="min-h-10 overflow-hidden">
           <img
-            className="w-full max-h-72 object-cover group-hover:scale-105 duration-600"
+            className="w-full h-72 object-cover group-hover:scale-105 duration-600"
             src={anime.images.webp.large_image_url}
             alt={anime.title}
           />
@@ -25,7 +25,7 @@ function AnimeCard({ anime }) {
           </div>
         </div>
         <div className="p-4 min-h-15 text-base font-medium">
-          <h2 className="text-sm truncate max-w-40">{anime.title_english}</h2>
+          <h2 className="text-sm truncate max-w-40">{!anime.title_english ? "Untitled" : anime.title_english}</h2>
           <p className="pt-1 text-sm text-white/30">
             {anime.aired.string.slice(0, 5)}, {anime.aired.prop.from.year}
           </p>

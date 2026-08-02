@@ -1,7 +1,22 @@
 import { Link } from "react-router";
+import placeholder from "../assets/placeholder.png";
 
 function DetailsHero({ anime }) {
-  const season = anime.season.charAt(0).toUpperCase() + anime.season.slice(1);
+  const {
+    title,
+    title_english,
+    year,
+    status,
+    season,
+    images,
+    genres = [],
+    studios = [],
+  } = anime;
+
+  const formattedSeason = season
+    ? season.charAt(0).toUpperCase() + season.slice(1)
+    : "TBA";
+
   console.log(anime);
 
   return (
@@ -18,20 +33,24 @@ function DetailsHero({ anime }) {
       <div className="flex flex-col sm:flex-row items-center sm:justify-center gap-4 sm:px-10">
         <img
           className="max-w-50 sm:max-w-60 rounded-xl"
-          src={anime.images.webp.large_image_url}
-          alt={anime.title_english}
+          src={images?.webp?.large_image_url ?? placeholder}
+          alt={title_english ?? title ?? "Untitled"}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = placeholder;
+          }}
         />
 
         <div className="flex flex-col items-center gap-4 sm:max-w-135 text-center">
           <h1 className="text-xl sm:text-2xl font-semibold">
-            {anime.title_english}
+            {title_english ?? title ?? "Untitled"}
           </h1>
           <h2 className="px-2 text-sm sm:text-lg text-white/60">
-            {anime.title}
+            {title ?? "Untitled"}
           </h2>
 
           <div className="flex justify-center flex-wrap gap-2 sm:min-w-60">
-            {anime.genres.map((genre) => (
+            {genres.map((genre) => (
               <div
                 className="px-3 py-1 text-sm border border-white/10 rounded-full bg-zinc-800"
                 key={genre.mal_id}
@@ -43,8 +62,8 @@ function DetailsHero({ anime }) {
 
           <div>
             <p className="text-sm sm:text-base text-white/60">
-              {season} {anime.year} • {anime.status} •{" "}
-              {anime.studios[0].name}{" "}
+              {formattedSeason} {year} • {status ?? "Unknown"} •{" "}
+              {studios[0]?.name ?? "Unknown Studio"}
             </p>
           </div>
         </div>

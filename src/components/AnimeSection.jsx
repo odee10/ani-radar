@@ -20,7 +20,7 @@ function AnimeSection() {
 
       try {
         const response = await fetch(
-          `https://api.jikan.moe/v4/seasons/now?page=${page}`,
+          `https://api.jikan.moe/v4/seasons/upcoming`,
         );
 
         if (!response.ok) {
@@ -56,7 +56,7 @@ function AnimeSection() {
 
   return (
     <div className="flex flex-col items-center gap-6 px-4 py-8 overflow-hidden">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-200">
         <h1 className="col-span-2 sm:col-span-3 mb-4 text-2xl text-lime-400 font-black capitalize">
           {filteredList[0]?.season} {filteredList[0]?.year}
         </h1>
@@ -86,3 +86,5 @@ function AnimeSection() {
 }
 
 export default AnimeSection;
+
+// `https://api.jikan.moe/v4/seasons/now?page=${page}`,
