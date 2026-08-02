@@ -2,7 +2,7 @@ function DetailsSkeleton() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex px-4 pt-4 pb-6 w-full max-w-220">
-          <div className="px-10 py-5 rounded-xl bg-zinc-800"></div>
+        <div className="px-10 py-5 rounded-xl bg-zinc-800"></div>
       </div>
 
       <div className="flex flex-col sm:flex-row sm:justify-center items-center gap-4 sm:px-10">

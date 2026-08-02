@@ -43,7 +43,10 @@ function AnimeInfo({ anime }) {
           <h1 className="text-xl font-bold text-lime-400">Statistics</h1>
           <h2>Score: {!anime.score ? "" : anime.score}</h2>
           <h2>
-            Rank: {!anime.rank ? "" : anime.rank} {!anime.rank ? "" : `(scored by ${anime.scored_by.toLocaleString()})`}
+            Rank: {!anime.rank ? "" : anime.rank}{" "}
+            {!anime.rank
+              ? ""
+              : `(scored by ${anime.scored_by.toLocaleString()})`}
           </h2>
           <h2>Popularity: #{anime.popularity.toLocaleString()}</h2>
           <h2>Members: {anime.members.toLocaleString()}</h2>

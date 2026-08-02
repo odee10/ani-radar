@@ -7,7 +7,7 @@ function Home() {
   return(
     <>
       <Header />
-      <AnimeSection title="Summer 2026" />
+      <AnimeSection />
       <Footer />
     </>
   );
