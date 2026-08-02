@@ -8,6 +8,7 @@ function AnimeSection() {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [page, setPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -31,6 +32,7 @@ function AnimeSection() {
         setHasNextPage(data.pagination.has_next_page);
       } catch (error) {
         console.error(error);
+        setError("Unable to load more anime. Please try gain.");
       } finally {
         if (page === 1) {
           setIsLoading(false);
@@ -54,7 +56,7 @@ function AnimeSection() {
 
   return (
     <div className="flex flex-col items-center gap-6 px-4 py-8 overflow-hidden">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-200">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
         <h1 className="col-span-2 sm:col-span-3 mb-4 text-2xl text-lime-400 font-black capitalize">
           {filteredList[0]?.season} {filteredList[0]?.year}
         </h1>
@@ -84,5 +86,3 @@ function AnimeSection() {
 }
 
 export default AnimeSection;
-
-// remember to make an AnimeSectionSkeleton for this component
