@@ -75,6 +75,22 @@ function DetailsBody({ anime }) {
           <h2>Favorites: {favorites?.toLocaleString() ?? "Unknown"}</h2>
         </div>
       </div>
+
+      <div className="p-4 w-full max-w-200 rounded-xl bg-zinc-800/50">
+        <h1 className="mb-2 text-xl font-bold text-lime-400">Trailer</h1>
+        {!trailer.youtube_id ? (
+          <div className="grid place-items-center p-4 rounded-xl bg-zinc-800 aspect-video">
+            <p className="text-lg sm:text-xl font-medium sm:font-semibold text-white/30">Trailer unavailable</p>
+          </div>
+        ) : (
+          <iframe
+            className="w-full rounded-lg aspect-video"
+            src={`https://www.youtube.com/embed/${trailer.youtube_id}?playsinline=1`}
+            title={trailer?.title}
+            allowFullScreen
+          ></iframe>
+        )}
+      </div>
     </div>
   );
 }
