@@ -34,7 +34,7 @@ function DetailsHero({ anime }) {
         <img
           className="max-w-50 sm:max-w-60 rounded-xl"
           src={images?.webp?.large_image_url ?? placeholder}
-          alt={title_english ?? title ?? "Untitled"}
+          alt={title_english ?? title ?? "Anime Card Image"}
           onError={(e) => {
             e.currentTarget.onerror = null;
             e.currentTarget.src = placeholder;

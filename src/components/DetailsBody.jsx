@@ -67,7 +67,7 @@ function DetailsBody({ anime }) {
           <h2>Score: {score ?? "N/A"}</h2>
           <h2>
             Rank: {rank ?? "N/A"}{" "}
-            {!rank ? "" : `(scored by ${scored_by?.toLocaleString()})`}
+            {!rank ? "" : `(scored by ${scored_by?.toLocaleString()} users)`}
           </h2>
           <h2>Popularity: {popularity?.toLocaleString() ?? "Unknown"}</h2>
           <h2>Members: {members?.toLocaleString() ?? "Unknown"}</h2>
