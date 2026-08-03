@@ -13,7 +13,7 @@ function Details() {
     async function fetchData() {
       try {
         const response = await fetch(
-          `https://api.jikan.moe/v4/anime/${id}`,
+          `https://api.tenrai.org/v1/anime/${id}/full`,
         );
 
         if (!response.ok) {

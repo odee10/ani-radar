@@ -18,6 +18,7 @@ function DetailsBody({ anime }) {
     favorites,
     producers = [],
     themes = [],
+    trailer = {},
   } = anime;
 
   const formattedSeason = season

@@ -6,9 +6,9 @@ function Footer() {
           Powered by{" "}
           <a
             className="text-lime-400/80 hover:text-lime-400 font-medium underline decoration-1"
-            href="https://jikan.moe/"
+            href="https://tenrai.org/"
           >
-            Jikan API
+            Tenrai API
           </a>
         </p>
         <p>

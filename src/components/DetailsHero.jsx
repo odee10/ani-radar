@@ -42,7 +42,7 @@ function DetailsHero({ anime }) {
         />
 
         <div className="flex flex-col items-center gap-4 sm:max-w-135 text-center">
-          <h1 className="text-xl sm:text-2xl font-semibold">
+          <h1 className="px-2 text-xl sm:text-2xl font-semibold">
             {title_english ?? title ?? "Untitled"}
           </h1>
           <h2 className="px-2 text-sm sm:text-lg text-white/60">
