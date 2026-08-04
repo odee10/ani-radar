@@ -4,10 +4,12 @@ import DetailsSkeleton from "./DetailsSkeleton";
 import DetailsHero from "../components/DetailsHero";
 import DetailsBody from "../components/DetailsBody";
 import Footer from "../components/Footer";
+import ErrorState from "./ErrorState";
 
 function Details() {
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -24,11 +26,16 @@ function Details() {
         setAnime(data.data);
       } catch (error) {
         console.error(error);
+        setError(true);
       }
     }
 
     fetchData();
   }, [id]);
+
+  if (error) {
+    return <ErrorState />;
+  }
 
   return (
     <div>

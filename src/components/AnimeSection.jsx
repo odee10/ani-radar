@@ -20,7 +20,7 @@ function AnimeSection() {
 
       try {
         const response = await fetch(
-          `https://api.tenrai.org/v1/seasons/now?sfw=true&page=${page}`,
+          `https://api.tenrai.org/v1/seasons/now?sfw&page=${page}`,
         );
 
         if (!response.ok) {
