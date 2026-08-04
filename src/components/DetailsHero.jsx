@@ -17,8 +17,6 @@ function DetailsHero({ anime }) {
     ? season.charAt(0).toUpperCase() + season.slice(1)
     : "TBA";
 
-  console.log(anime);
-
   return (
     <div className="flex flex-col items-center">
       <div className="flex px-4 pt-4 pb-6 w-full max-w-220">
@@ -42,7 +40,7 @@ function DetailsHero({ anime }) {
         />
 
         <div className="flex flex-col items-center gap-4 sm:max-w-135 text-center">
-          <h1 className="text-xl sm:text-2xl font-semibold">
+          <h1 className="px-2 text-xl sm:text-2xl font-semibold">
             {title_english ?? title ?? "Untitled"}
           </h1>
           <h2 className="px-2 text-sm sm:text-lg text-white/60">

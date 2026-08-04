@@ -20,7 +20,7 @@ function AnimeSection() {
 
       try {
         const response = await fetch(
-          `https://api.jikan.moe/v4/seasons/now?page=${page}`,
+          `https://api.tenrai.org/v1/seasons/now?sfw&page=${page}`,
         );
 
         if (!response.ok) {
@@ -86,5 +86,3 @@ function AnimeSection() {
 }
 
 export default AnimeSection;
-
-// https://api.tenrai.org/v1/seasons/now?sfw=true&page=${page}

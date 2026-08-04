@@ -4,16 +4,18 @@ import DetailsSkeleton from "./DetailsSkeleton";
 import DetailsHero from "../components/DetailsHero";
 import DetailsBody from "../components/DetailsBody";
 import Footer from "../components/Footer";
+import ErrorState from "./ErrorState";
 
 function Details() {
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch(
-          `https://api.jikan.moe/v4/anime/${id}`,
+          `https://api.tenrai.org/v1/anime/${id}/full`,
         );
 
         if (!response.ok) {
@@ -24,11 +26,16 @@ function Details() {
         setAnime(data.data);
       } catch (error) {
         console.error(error);
+        setError(true);
       }
     }
 
     fetchData();
   }, [id]);
+
+  if (error) {
+    return <ErrorState />;
+  }
 
   return (
     <div>
