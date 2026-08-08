@@ -3,22 +3,23 @@ import placeholder from "../assets/placeholder.png";
 
 function AnimeCard({ anime }) {
   const { mal_id, images, title_english, title, type, aired } = anime;
-  let tvIcon;
+  let typeIcon;
 
   switch (true) {
     case (type == "TV"):
-      tvIcon = "bg-violet-600";
+      typeIcon = "bg-violet-600";
       break;
     case (type == "Movie"):
-      tvIcon = "bg-blue-600";
+      typeIcon = "bg-blue-600";
       break;
     case (type == "ONA"):
-      tvIcon = "bg-rose-500";
+      typeIcon = "bg-rose-500";
       break;
     case (type == 'OVA'):
-      tvIcon = "bg-amber-600";
+      typeIcon = "bg-amber-600";
+      break;
     default:
-      tvIcon = "bg-slate-500"
+      typeIcon = "bg-slate-500"
       break;
   }
 
@@ -32,7 +33,7 @@ function AnimeCard({ anime }) {
             alt={title_english ?? title ?? "Anime Card Image"}
           />
           <div
-            className={`absolute top-3 right-3 px-2 rounded-md ${tvIcon} opacity-80`}
+            className={`absolute top-3 right-3 px-2 rounded-md ${typeIcon} opacity-80`}
           >
             <h3>{type}</h3>
           </div>

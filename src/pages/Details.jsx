@@ -9,7 +9,7 @@ import ErrorState from "./ErrorState";
 function Details() {
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
