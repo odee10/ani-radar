@@ -8,7 +8,6 @@ function AnimeSection() {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [page, setPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -32,7 +31,6 @@ function AnimeSection() {
         setHasNextPage(data.pagination.has_next_page);
       } catch (error) {
         console.error(error);
-        setError("Unable to load more anime. Please try gain.");
       } finally {
         if (page === 1) {
           setIsLoading(false);
@@ -62,7 +60,7 @@ function AnimeSection() {
         </h1>
         {isLoading
           ? [...Array(6)].map((_, index) => <AnimeCardSkeleton key={index} />)
-          : filteredList.map((anime, index) => (
+          : filteredList.map((anime) => (
               <AnimeCard key={anime.mal_id} anime={anime} />
             ))}
       </div>
