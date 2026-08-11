@@ -42,7 +42,7 @@ function AnimeCard({ anime }) {
           <h2 className="text-sm truncate max-w-40">
             {title_english ?? title ?? "Unknown"}
           </h2>
-          <p className="pt-1 text-sm text-white/30">
+          <p className="pt-1 text-sm dark:text-white/30">
             {aired?.string?.slice(0, 5)}, {aired?.prop?.from?.year}
           </p>
         </div>

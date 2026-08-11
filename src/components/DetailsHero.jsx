@@ -43,7 +43,7 @@ function DetailsHero({ anime }) {
           <h1 className="px-2 text-xl sm:text-2xl font-semibold">
             {title_english ?? title ?? "Untitled"}
           </h1>
-          <h2 className="px-2 text-sm sm:text-lg text-white/60">
+          <h2 className="px-2 text-sm sm:text-lg dark:text-white/60">
             {title ?? "Untitled"}
           </h2>
 
@@ -59,7 +59,7 @@ function DetailsHero({ anime }) {
           </div>
 
           <div>
-            <p className="text-sm sm:text-base text-white/60">
+            <p className="text-sm sm:text-base dark:text-white/60">
               {formattedSeason} {year} • {status ?? "Unknown"} •{" "}
               {studios[0]?.name ?? "Unknown Studio"}
             </p>

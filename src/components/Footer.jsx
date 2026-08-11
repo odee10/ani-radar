@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="flex justify-center border-t border-white/10 dark:bg-zinc-950/20">
-      <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-1 p-4 w-full max-w-200 text-sm text-white/30 text-center">
+      <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-1 p-4 w-full max-w-200 text-sm dark:text-white/30 text-center">
         <p>
           Powered by{" "}
           <a
