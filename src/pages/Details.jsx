@@ -33,6 +33,13 @@ function Details() {
     fetchData();
   }, [id]);
 
+  useEffect(() => {
+    if (anime) {
+      const title = anime.title_english || anime.title;
+      document.title = title ? `${title} | AniRadar` : "AniRadar";
+    }
+  }, [anime]);
+
   if (error) {
     return <ErrorState />;
   }
