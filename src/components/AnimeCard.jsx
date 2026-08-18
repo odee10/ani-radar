@@ -3,23 +3,24 @@ import placeholder from "../assets/placeholder.png";
 
 function AnimeCard({ anime }) {
   const { mal_id, images, title_english, title, type, aired } = anime;
+  const airedFrom = aired?.prop?.from;
   let typeIcon;
 
   switch (true) {
-    case (type == "TV"):
+    case type == "TV":
       typeIcon = "bg-violet-600";
       break;
-    case (type == "Movie"):
+    case type == "Movie":
       typeIcon = "bg-blue-600";
       break;
-    case (type == "ONA"):
+    case type == "ONA":
       typeIcon = "bg-rose-500";
       break;
-    case (type == 'OVA'):
+    case type == "OVA":
       typeIcon = "bg-amber-600";
       break;
     default:
-      typeIcon = "bg-slate-500"
+      typeIcon = "bg-slate-500";
       break;
   }
 
@@ -43,7 +44,9 @@ function AnimeCard({ anime }) {
             {title_english ?? title ?? "Unknown"}
           </h2>
           <p className="pt-1 text-sm dark:text-white/30">
-            {aired?.string?.slice(0, 5)}, {aired?.prop?.from?.year}
+            {airedFrom.month && airedFrom.day && airedFrom.year
+              ? `${new Date(0, airedFrom.month - 1).toLocaleString("en-US", { month: "short" })} ${airedFrom.day}, ${airedFrom.year}`
+              : "Date unavailable"}
           </p>
         </div>
       </div>
