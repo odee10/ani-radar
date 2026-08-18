@@ -49,7 +49,7 @@ function Details() {
       {!anime ? (
         <DetailsSkeleton />
       ) : (
-        <div className="w-screen h-dvh">
+        <div className="h-dvh">
           <DetailsHero anime={anime} />
           <DetailsBody anime={anime} />
           <Footer />
