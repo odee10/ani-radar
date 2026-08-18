@@ -28,7 +28,7 @@ function DetailsBody({ anime }) {
 
   return (
     <div className="flex flex-col sm:items-center gap-6 sm:gap-5 p-4 sm:p-10 mb-2 sm:mb-0">
-      <div className="p-4 sm:w-full sm:max-w-198 max-h-60 rounded-xl bg-zinc-800/50 overflow-scroll">
+      <div className="p-4 sm:w-full sm:max-w-198 max-h-60 rounded-xl bg-zinc-800/50 overflow-y-auto">
         <h1 className="text-xl font-bold text-lime-400">Synopsis</h1>
         <h2>{synopsis ?? "N/A"}</h2>
       </div>
